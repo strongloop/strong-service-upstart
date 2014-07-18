@@ -1,4 +1,3 @@
-strong-service-upstart
-======================
+# strong-service-upstart
 
-Generate an upstart job using the provided parameters.
+Generate an Upstart job using the provided parameters.
