@@ -3,6 +3,7 @@ var _ = require('lodash');
 
 // In the interest of reusability, these options are the same as in node-linux
 // https://github.com/coreybutler/node-linux/blob/ef307b/lib/systemv.js#L99-L152
+// can we use node-linux? I assume it does lots of things we don't want?
 
 var DEFAULTS = {
   label: 'node-app',
@@ -31,14 +32,15 @@ function renderUpstartJob(opts, cb) {
   }
 }
 
+// you need both ways?
 function syncRenderUpstart(opts) {
-  opts = ensureOptions(opts);
+  opts = ensureOptions(opts); // can be done at start of renderUpstartJobs?
   var jst = fs.readFileSync(opts.template, 'utf8');
   return _.template(jst, opts);
 }
 
 function asyncRenderUpstart(opts, cb) {
-  opts = ensureOptions(opts);
+  opts = ensureOptions(opts); // ditto
   fs.readFile(opts.template, 'utf8', function(err, jst) {
     var job = err ? null : _.template(jst, opts);
     return cb(err, job);
@@ -92,6 +94,6 @@ if (require.main === module) {
                   def);
     });
   } else {
-    process.stdout.write(renderUpstartJob(opts));
+    process.stdout.write(renderUpstartJob(opts));// could just be async
   }
 }
