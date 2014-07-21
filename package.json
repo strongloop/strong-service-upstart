@@ -1,0 +1,35 @@
+{
+  "name": "strong-service-upstart",
+  "version": "0.0.0",
+  "description": "Generate an upstart job using the provided parameters.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test/test-*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strongloop/strong-service-upstart.git"
+  },
+  "keywords": [
+    "upstart"
+  ],
+  "author": "Ryan Graham <ryan@strongloop.com>",
+  "license": {
+    "name": "Dual Artistic/StrongLoop",
+    "url": "https://github.com/strongloop/strong-service-upstart/blob/master/LICENSE.md"
+  },
+  "bugs": {
+    "url": "https://github.com/strongloop/strong-service-upstart/issues"
+  },
+  "homepage": "https://github.com/strongloop/strong-service-upstart",
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "minimist": "^0.2.0"
+  },
+  "devDependencies": {
+    "tap": "git://github.com/strongloop-forks/node-tap#production"
+  },
+  "directories": {
+    "test": "test"
+  }
+}
