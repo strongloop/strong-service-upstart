@@ -29,8 +29,8 @@ limit core unlimited unlimited
 # Environment variables:
 <% if (env && env.length > 0) {
   _.forEach(env, function(pair) {
-  %>env <%- pair[0] %>=<%- pair[1] %><%
-}) } else {
+  %>env <%- pair[0] %>=<%- pair[1] %>
+<%}) } else {
   %># no environment variables set<%
 } %>
 
