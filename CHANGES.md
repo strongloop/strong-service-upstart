@@ -1,3 +1,9 @@
+2014-11-15, Version 1.0.1
+=========================
+
+ * Hide *.tgz from git (and npm pack) (Ryan Graham)
+
+
 2014-10-16, Version 1.0.0
 =========================
 
