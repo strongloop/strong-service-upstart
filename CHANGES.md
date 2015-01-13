@@ -1,4 +1,10 @@
-2014-11-15, Version 1.0.1
+2015-01-13, Version 1.0.2
+=========================
+
+ * Fix bad CLA URL in CONTRIBUTING.md (Ryan Graham)
+
+
+2014-11-14, Version 1.0.1
 =========================
 
  * Hide *.tgz from git (and npm pack) (Ryan Graham)
