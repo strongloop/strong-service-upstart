@@ -14,7 +14,7 @@ Contributing to `strong-service-upstart` is easy. In a few simple steps:
   * Adhere to code style outlined in the [Google C++ Style Guide][] and
     [Google Javascript Style Guide][].
 
-  * Sign the [Contributor License Agreement](https://cla.strongloop.com/strongloop/strong-service-upstart)
+  * Sign the [Contributor License Agreement](https://cla.strongloop.com/agreements/strongloop/strong-service-upstart)
 
   * Submit a pull request through Github.
 
