@@ -35,12 +35,12 @@ function renderUpstartJob(opts, cb) {
 
 function syncRenderUpstart(opts) {
   var jst = fs.readFileSync(opts.template, 'utf8');
-  return _.template(jst, opts);
+  return _.template(jst)(opts);
 }
 
 function asyncRenderUpstart(opts, cb) {
   fs.readFile(opts.template, 'utf8', function(err, jst) {
-    var job = err ? null : _.template(jst, opts);
+    var job = err ? null : _.template(jst)(opts);
     return cb(err, job);
   });
 }
