@@ -1,5 +1,5 @@
-var assert = require('assert');
 var render = require('../');
+var tap = require('tap');
 
 var options = {
   name: 'strong-pm',
@@ -17,7 +17,9 @@ var options = {
 var ENV_FOO = /^env FOO=foo$/m;
 var ENV_BAR = /^env BAR=bar$/m;
 
-var result = render(options);
-
-assert(ENV_FOO.test(result));
-assert(ENV_BAR.test(result));
+tap.test('env vars', function(t) {
+  var result = render(options);
+  t.match(result, ENV_FOO);
+  t.match(result, ENV_BAR);
+  t.end();
+});

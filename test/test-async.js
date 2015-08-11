@@ -1,6 +1,6 @@
-var assert = require('assert');
 var common = require('./common');
 var render = require('../');
+var tap = require('tap');
 
 var expected = common.fixture('strong-pm-1.4.conf');
 var options = {
@@ -11,13 +11,11 @@ var options = {
   script: '/custom/path/to/my/script.js',
   created: '2014-08-22T00:00:00.000Z',
 };
-var result = null;
 
-process.on('exit', function() {
-  assert.strictEqual(result, expected);
-});
-
-render(options, function(err, job) {
-  assert.ifError(err);
-  result = job;
+tap.test('async mode', function(t) {
+  render(options, function(err, job) {
+    t.ifError(err);
+    t.equal(job, expected, 'renders correctly');
+    t.end();
+  });
 });

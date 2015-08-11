@@ -1,7 +1,6 @@
-var assert = require('assert');
 var common = require('./common');
-
 var render = require('../');
+var tap = require('tap');
 
 var options = {
   name: 'strong-pm',
@@ -15,6 +14,8 @@ var options = {
 
 var expected = common.fixture('strong-pm-0.6.conf');
 
-var result = render(options);
-
-assert.strictEqual(result, expected);
+tap.test('sync mode', function(t) {
+  var result = render(options);
+  t.strictEqual(result, expected);
+  t.end();
+});
