@@ -1,6 +1,7 @@
 # strong-service-upstart
 
-Test PR
+Generate an Upstart job using the provided parameters.
+
 
 ## Install
 
