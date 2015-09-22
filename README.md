@@ -2,6 +2,7 @@
 
 Generate an Upstart job using the provided parameters.
 
+
 ## Install
 
 `npm install strong-service-upstart`
