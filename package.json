@@ -1,6 +1,6 @@
 {
   "name": "strong-service-upstart",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "Generate an upstart job using the provided parameters.",
   "main": "index.js",
   "scripts": {
